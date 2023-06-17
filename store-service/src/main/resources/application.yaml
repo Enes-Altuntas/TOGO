@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: store-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/togo
+    username: enesa
+    password: e1n2e3s4
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  kafka:
+    producer:
+      bootstrap-servers: http://localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      topic:
+        save: marker-save
+        update: marker-update
+        delete: marker-delete
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+server:
+  port: 8001

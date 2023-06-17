@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ElasticsearchConfiguration">
+    <option name="clusterConfigurations">
+      <map>
+        <entry key="6bd25096-6197-4fc9-bd55-e806a5aa3194">
+          <value>
+            <Y>
+              <option name="id" value="6bd25096-6197-4fc9-bd55-e806a5aa3194" />
+              <option name="label" value="@localhost" />
+              <option name="url" value="http://localhost:9200" />
+              <option name="version" value="1" />
+            </Y>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="requestHistory">
+      <map>
+        <entry key="6bd25096-6197-4fc9-bd55-e806a5aa3194" value="[{&quot;path&quot;:&quot;/marker/_search&quot;,&quot;body&quot;:&quot;{\n  \&quot;query\&quot;: {\n    \&quot;bool\&quot;: {\n      \&quot;must\&quot;: {\n        \&quot;match_all\&quot;: {}\n      },\n      \&quot;filter\&quot;: {\n        \&quot;geo_distance\&quot;: {\n          \&quot;distance\&quot;: \&quot;12km\&quot;,\n          \&quot;pin.location\&quot;: [ -70, 40 ]\n        }\n      }\n    }\n  }\n}&quot;,&quot;method&quot;:&quot;GET&quot;},{&quot;path&quot;:&quot;/marker/_search&quot;,&quot;body&quot;:&quot;{\n  \&quot;from\&quot;: 0,\n  \&quot;size\&quot;: 50,\n  \&quot;query\&quot;: {\n    \&quot;match_all\&quot;: {}\n  }\n}&quot;,&quot;method&quot;:&quot;GET&quot;},{&quot;path&quot;:&quot;/.geoip_databases/_search&quot;,&quot;body&quot;:&quot;{\n  \&quot;from\&quot;: 0,\n  \&quot;size\&quot;: 50,\n  \&quot;query\&quot;: {\n    \&quot;match_all\&quot;: {}\n  }\n}&quot;,&quot;method&quot;:&quot;GET&quot;},{&quot;path&quot;:&quot;/_nodes/2tkatyPKQnuqnHRtCybtPA&quot;,&quot;body&quot;:&quot;&quot;,&quot;method&quot;:&quot;GET&quot;}]" />
+      </map>
+    </option>
+    <option name="searchQueryHistoryState" value="[]" />
+    <option name="version" value="1" />
+  </component>
+</project>

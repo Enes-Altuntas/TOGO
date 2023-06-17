@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: map-service
+  elasticsearch:
+    uris: http://localhost:9200
+  kafka:
+    consumer:
+      topic:
+        save: marker-save
+        update: marker-update
+        status: marker-change-status
+        delete: marker-delete
+      group-id: map
+      auto-offset-reset: earliest
+      bootstrap-servers: http://localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+management:
+  health:
+    elasticsearch:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+server:
+  port: 8000
